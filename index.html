@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공정미디어 - 프리미엄 라이브 스트리밍 중계 서비스</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#0f172a', // 버튼 기본 색상 (#0f172a)
+                            700: '#1e293b', // 버튼 호버 시 색상
+                            900: '#1e3a8a',
+                            dark: '#3267c9', // 바탕화면 기본 색상 (#3267c9)
+                            panel: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts (Noto Sans KR & Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 min-h-screen selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-brand-dark/80 backdrop-blur-md border-b border-slate-800/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Premium Custom Vector Logo -->
+                <div class="w-10 h-10 bg-gradient-to-tr from-brand-600 to-slate-700 rounded-xl flex items-center justify-center shadow-lg">
+                    <i data-lucide="video" class="w-5 h-5 text-white"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white font-montserrat">GONGJEONG</span>
+                    <span class="block text-[10px] text-slate-200 tracking-widest uppercase font-montserrat -mt-1">Media Group</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
+                <a href="#about" class="hover:text-brand-600 transition-colors">공정미디어 소개</a>
+                <a href="#services" class="hover:text-brand-600 transition-colors">중계 서비스</a>
+                <a href="#portfolio" class="hover:text-brand-600 transition-colors">실적/포트폴리오</a>
+                <a href="#calculator" class="hover:text-brand-600 transition-colors">실시간 견적기</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">자주 묻는 질문</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#calculator" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-bold text-sm transition-all shadow-md hover:scale-[1.02]">
+                    <i data-lucide="calculator" class="w-4 h-4"></i>
+                    <span>무상 견적내기</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 left-10 w-[300px] h-[300px] bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Text -->
+                <div class="lg:col-span-7 text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/50 border border-white/20 text-brand-100 text-sm font-semibold">
+                        <span class="flex h-2 w-2 relative">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                        </span>
+                        <span>방송 사고율 0% 달성 • 100% 자사장비운용</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.15] tracking-tight">
+                        26년 공중파 PD 연출<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300">격이 다른 라이브 스트리밍</span>
+                    </h1>
+                    
+                    <p class="text-slate-100 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        실패가 허용되지 않는 중요한 행사, 아직도 저가형 프리랜서에게 도박하듯 맡기십니까? 
+                        공중파 베테랑 PD의 지휘 하에 100% 소속 전문 스태프와 정품 장비만을 투입하여 지상파급 생방송 퀄리티를 보장합니다.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                        <a href="#calculator" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-bold text-center shadow-lg hover:scale-[1.02] transition-all">
+                            3분 실시간 무료 견적 신청
+                        </a>
+                        <a href="#portfolio" class="px-8 py-4 bg-slate-900/40 hover:bg-slate-900/60 text-slate-100 border border-white/20 rounded-xl font-semibold text-center transition-all">
+                            포트폴리오 영상 보기
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/20">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-black text-white font-montserrat">26년</span>
+                            <span class="text-xs sm:text-sm text-slate-200">공중파 PD 방송 연출</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-black text-white font-montserrat">0건</span>
+                            <span class="text-xs sm:text-sm text-slate-200">네트워크/음향 방송 사고</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-black text-white font-montserrat">100%</span>
+                            <span class="text-xs sm:text-sm text-slate-200">소속 스태프 및 자사 장비</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual (Simulating a control room with 3-Slide Dissolve Carousel) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-[450px] aspect-[4/3] bg-gradient-to-tr from-slate-900 to-slate-800 p-3 rounded-2xl border border-slate-700/60 shadow-2xl">
+                        <!-- Camera Feed Simulator -->
+                        <div class="relative w-full h-full rounded-xl overflow-hidden bg-black flex flex-col justify-between p-4">
+                            
+                            <!-- background slides (z-0 to sit behind control graphics) -->
+                            <div class="absolute inset-0 z-0">
+                                <!-- Slide 1: Global Conference (Incorporating user's first image URL with safe Unsplash fallback) -->
+                                <div class="feed-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+                                    <img src="https://github.com/Fairmedida/fairmedia/issues/1" 
+                                         onerror="this.src='https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'" 
+                                         alt="글로벌 하이브리드 컨퍼런스 생중계" 
+                                         class="absolute inset-0 w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-slate-950/70 flex flex-col items-center justify-center p-6 text-center z-10">
+                                        <div class="space-y-3">
+                                            <span class="text-4xl block animate-bounce">🎤</span>
+                                            <p class="text-[10px] text-brand-100 font-bold uppercase tracking-widest font-montserrat">FEED CH-01</p>
+                                            <h3 class="text-sm font-black text-white tracking-tight bg-black/60 px-3 py-1.5 rounded-full border border-white/10">
+                                                글로벌 하이브리드 컨퍼런스 생중계
+                                            </h3>
+                                            <p class="text-[9px] text-slate-300">실시간 다원 화상 연결 • 동시 송출 제어 중</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2: Medical Seminar (Incorporating user's second image URL with safe Unsplash fallback) -->
+                                <div class="feed-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                                    <img src="https://github.com/Fairmedida/fairmedia/issues/3" 
+                                         onerror="this.src='https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80'" 
+                                         alt="국제 신경외과 학술대회 현장 송출" 
+                                         class="absolute inset-0 w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-slate-950/70 flex flex-col items-center justify-center p-6 text-center z-10">
+                                        <div class="space-y-3">
+                                            <span class="text-4xl block animate-pulse">🩺</span>
+                                            <p class="text-[10px] text-cyan-400 font-bold uppercase tracking-widest font-montserrat">FEED CH-02</p>
+                                            <h3 class="text-sm font-black text-white tracking-tight bg-black/60 px-3 py-1.5 rounded-full border border-white/10">
+                                                국제 신경외과 학술대회 현장 송출
+                                            </h3>
+                                            <p class="text-[9px] text-slate-300">발표자 슬라이드 PIP 실시간 합성 전송</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3: Corporate Townhall (Incorporating user's third image URL with safe Unsplash fallback) -->
+                                <div class="feed-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                                    <img src="https://github.com/Fairmedida/fairmedia/issues/2" 
+                                         onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'" 
+                                         alt="대기업 신년 임직원 타운홀 미팅" 
+                                         class="absolute inset-0 w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-slate-950/70 flex flex-col items-center justify-center p-6 text-center z-10">
+                                        <div class="space-y-3">
+                                            <span class="text-4xl block">💻</span>
+                                            <p class="text-[10px] text-purple-400 font-bold uppercase tracking-widest font-montserrat">FEED CH-03</p>
+                                            <h3 class="text-sm font-black text-white tracking-tight bg-black/60 px-3 py-1.5 rounded-full border border-white/10">
+                                                대기업 신년 임직원 타운홀 미팅
+                                            </h3>
+                                            <p class="text-[9px] text-slate-300">망 이중화 및 사내 보안 방화벽 통과 완료</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Overlay UI elements (Always on top with z-10) -->
+                            <div class="flex justify-between items-start z-10 text-[10px] font-mono tracking-wider text-red-500">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                                    <span>LIVE</span>
+                                </div>
+                                <div class="text-slate-300 font-bold">1080p 60FPS</div>
+                            </div>
+
+                            <!-- Center Grid Overlay (z-10) -->
+                            <div class="absolute inset-0 z-10 flex items-center justify-center opacity-35 pointer-events-none">
+                                <div class="w-full h-full border border-slate-800 grid grid-cols-3 grid-rows-3">
+                                    <div class="border-b border-r border-slate-800/40"></div>
+                                    <div class="border-b border-r border-slate-800/40"></div>
+                                    <div class="border-b border-slate-800/40"></div>
+                                    <div class="border-b border-r border-slate-800/40"></div>
+                                    <div class="border-b border-r border-slate-800/40"></div>
+                                    <div class="border-b border-slate-800/40"></div>
+                                    <div class="border-r border-slate-800/40"></div>
+                                    <div class="border-r border-slate-800/40"></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom UI (z-10) -->
+                            <div class="flex justify-between items-end z-10 text-[10px] font-mono text-slate-300">
+                                <div class="bg-black/40 px-1.5 py-0.5 rounded">CH1: -12dB <span class="text-green-400">█████░░</span></div>
+                                <div class="bg-black/40 px-1.5 py-0.5 rounded font-bold" id="cam-timecode">02:14:58:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Small floating overlay to represent real hardware / brand trust -->
+                    <div class="absolute -bottom-6 -left-6 bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-xl flex items-center gap-3">
+                        <div class="p-2.5 bg-green-500/10 rounded-lg">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400">보증 제도</span>
+                            <span class="text-sm font-bold text-white">무사고 보증보험 가입</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section (Core value prop) -->
+    <section id="about" class="py-24 bg-slate-900/20 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-200">Why Gongjeong?</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white">행사의 성패를 결정짓는<br>공정미디어만의 3대 신뢰 가치</p>
+                <p class="text-slate-100 text-sm sm:text-base">클라이언트들이 왜 수많은 중계 업체 중 공정미디어를 선택하고 재계약하는지, 그 명확한 이유를 보여드립니다.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-panel border border-slate-800 rounded-2xl p-8 hover:border-white/20 transition-all group">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-white transition-all">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">26년 공중파 PD 연출력</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        공중파 방송사 출신의 베테랑 연출가와 현역 기술진들이 방송 현장과 완벽히 동일한 워크플로우를 구성합니다. 큐시트의 마이크로 단위 타이밍까지 컨트롤합니다.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-panel border border-slate-800 rounded-2xl p-8 hover:border-white/20 transition-all group">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-white transition-all">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">100% 자사 보유 장비 & 인력</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        프리랜서 알바나 외주 대행을 사용하지 않고, 100% 자사의 인증된 엔지니어들과 수억 원 상당의 최신 정품 고해상도 장비를 전면 투입하여 일관된 하이퀄리티를 약속합니다.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-panel border border-slate-800 rounded-2xl p-8 hover:border-white/20 transition-all group">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-white transition-all">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">망 이중화 및 리스크 프리</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        현장 유선 네트워크 단절에 대비해 LTE/5G 무선 라우터 백업을 실시간 결합하는 '망 본딩(Bonding)' 솔루션을 적용하며, 사전에 무상으로 장소 답사를 완료합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Use Cases Section -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-100">Our Services</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white">행사 맞춤형 중계 솔루션</p>
+                <p class="text-slate-100 text-sm sm:text-base">다양한 목적과 규모의 온라인 행사를 맞춤 자막, 동시통역 중계, 멀티플랫폼 송출까지 최적화하여 지원합니다.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-6">
+                <!-- Case 1: B2B (Incorporating IMG_0364.jpg) -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:scale-[1.02] transition-all flex flex-col h-full">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="IMG_0364.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'" 
+                             alt="기업 세미나 & 컨퍼런스 현장 사진" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                        <div class="absolute inset-x-0 bottom-3 px-4 z-20 flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-brand-900/90 border border-brand-500/40 text-[10px] font-bold rounded text-brand-100 tracking-wider">
+                                🏢 B2B / CORPORATE
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h4 class="text-base font-bold text-white">기업 세미나 & 컨퍼런스</h4>
+                            <p class="text-slate-300 text-[11px] leading-relaxed">사내 타운홀 미팅, 신제품 쇼케이스, 글로벌 지사 연동 웨비나 중계에 최적화된 패키지입니다.</p>
+                        </div>
+                        <ul class="text-[10px] text-slate-300 space-y-1 pt-3 border-t border-slate-800">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>사내 보안 네트워크 설정 지원</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>기업 전용 PPT PIP 연출</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case 2: B2G (Incorporating KakaoTalk_20230524_115258316.jpg) -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:scale-[1.02] transition-all flex flex-col h-full">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="KakaoTalk_20230524_115258316.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'" 
+                             alt="공공기관 & 지자체 행사 현장 사진" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                        <div class="absolute inset-x-0 bottom-3 px-4 z-20 flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-purple-900/90 border border-purple-500/40 text-[10px] font-bold rounded text-purple-100 tracking-wider">
+                                🏛️ B2G / PUBLIC
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h4 class="text-base font-bold text-white">공공기관 & 지자체 포럼</h4>
+                            <p class="text-slate-300 text-[11px] leading-relaxed">시·도청, 진흥원, 공사 주관 행사 등 완벽한 평판 관리와 복잡한 행정 처리가 요구되는 행사용입니다.</p>
+                        </div>
+                        <ul class="text-[10px] text-slate-300 space-y-1 pt-3 border-t border-slate-800">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>수의 계약 서류 및 나라장터 지원</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>무결점 이중 백업 시스템 구비</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case 3: Academic (Incorporating 0329한중변호사세미나.jpg) -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:scale-[1.02] transition-all flex flex-col h-full">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="0329한중변호사세미나.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80'" 
+                             alt="의학 학술대회 & 세미나 현장 사진" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                        <div class="absolute inset-x-0 bottom-3 px-4 z-20 flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-cyan-900/90 border border-cyan-500/40 text-[10px] font-bold rounded text-cyan-100 tracking-wider">
+                                🎓 ACADEMIC
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h4 class="text-base font-bold text-white">의학 학술대회 & 세미나</h4>
+                            <p class="text-slate-300 text-[11px] leading-relaxed">고도의 음향/자막 합성 기술과 매끄러운 줌(Zoom) 소통, 동시통역 환경이 동반되는 학술 행사에 맞춤화되어 있습니다.</p>
+                        </div>
+                        <ul class="text-[10px] text-slate-300 space-y-1 pt-3 border-t border-slate-800">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>실시간 양방향 질의응답 오디오 세팅</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>동시통역 채널 완벽 분리 연동</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case 4: Culture & Live (Incorporating 뱃놀이_01.jpg) -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:scale-[1.02] transition-all flex flex-col h-full">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="뱃놀이_01.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80'" 
+                             alt="문화 축제 & 대형 공연 현장 사진" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                        <div class="absolute inset-x-0 bottom-3 px-4 z-20 flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-pink-900/90 border border-pink-500/40 text-[10px] font-bold rounded text-pink-100 tracking-wider">
+                                🎸 CULTURE & LIVE
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h4 class="text-base font-bold text-white">문화 축제 & 대형 공연</h4>
+                            <p class="text-slate-300 text-[11px] leading-relaxed">야외 축제, 스포츠 생중계, 밴드 공연 등 대형 전광판 송출 및 화려한 영상미와 지미집을 동원한 멀티캠 연출입니다.</p>
+                        </div>
+                        <ul class="text-[10px] text-slate-300 space-y-1 pt-3 border-t border-slate-800">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>지미집, 드론, 초망원 무선 카메라</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3 h-3 text-brand-500"></i>음향 전용 스테이지 콘솔 연계</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Proof Section (Our Works) -->
+    <section id="portfolio" class="py-24 bg-slate-900/10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-white mb-2">Our Works</h2>
+                    <p class="text-3xl sm:text-4xl font-black text-white">현장에서 증명한 성공 사례</p>
+                </div>
+                <p class="text-slate-100 text-sm max-w-md">국내외 유수의 기업, 대학, 공공기관이 공정미디어와 함께 중계 스트리밍을 구축해 오고 있습니다.</p>
+            </div>
+
+            <!-- Grid representation of portfolio items with actual user-provided images -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Portfolio 1: Hwaseong Baetnori Festival (뱃놀이_01.jpg) -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl border border-white/10 aspect-video bg-slate-950 mb-4">
+                        <img src="뱃놀이_01.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80'" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                             alt="화성 뱃놀이 축제 라이브 중계">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity z-20">
+                            <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <div class="p-4 absolute bottom-0 left-0 z-20">
+                            <span class="px-2.5 py-0.5 bg-slate-900/80 border border-white/20 text-[10px] rounded text-white font-bold">공식 축제 라이브</span>
+                        </div>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-100 group-hover:text-brand-600 transition-colors">화성 뱃놀이 축제 메인 무대 야외 생방송 중계</h4>
+                    <p class="text-xs text-slate-200 mt-1">지미집 포함 멀티캠 4대 운영, 실시간 방송 그래픽 자막 및 고음질 스테레오 수음</p>
+                </div>
+
+                <!-- Portfolio 2: Sino-Korean Seminar (0329한중변호사세미나.jpg) -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl border border-white/10 aspect-video bg-slate-950 mb-4">
+                        <img src="0329한중변호사세미나.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80'" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                             alt="한·중 변호사 투자 세미나">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity z-20">
+                            <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <div class="p-4 absolute bottom-0 left-0 z-20">
+                            <span class="px-2.5 py-0.5 bg-slate-900/80 border border-white/20 text-[10px] rounded text-white font-bold">국제 세미나</span>
+                        </div>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-100 group-hover:text-brand-600 transition-colors">한·중 투자 & 분쟁 해결 서울 세미나 다원 스트리밍</h4>
+                    <p class="text-xs text-slate-200 mt-1">해외 연사 실시간 연결 줌 연동 및 동시통역 오디오 믹싱, 다목적 PIP 화면 레이아웃 연출</p>
+                </div>
+
+                <!-- Portfolio 3: Convention Forum (IMG_0364.jpg) -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl border border-white/10 aspect-video bg-slate-950 mb-4">
+                        <img src="IMG_0364.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                             alt="글로벌 비즈니스 학술 포럼">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity z-20">
+                            <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <div class="p-4 absolute bottom-0 left-0 z-20">
+                            <span class="px-2.5 py-0.5 bg-slate-900/80 border border-white/20 text-[10px] rounded text-white font-bold">컨벤션 포럼</span>
+                        </div>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-100 group-hover:text-brand-600 transition-colors">대규모 비즈니스 컨벤션 포럼 온·오프라인 하이브리드 중계</h4>
+                    <p class="text-xs text-slate-200 mt-1">초고화질 다중 카메라 중계 콘솔 운용 및 현장 전광판 동시 송출, 네트워크 백업 망본딩 기술 적용</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Calculator (핵심 영업 전환 장치) -->
+    <section id="calculator" class="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900/20 to-brand-dark">
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="px-3 py-1 bg-slate-900/60 text-slate-200 rounded-full text-xs font-bold border border-white/10">3분 자동 견적 시스템</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">행사 견적, 실시간으로 투명하게 확인하세요</h2>
+                <p class="text-slate-100 text-sm sm:text-base">필요한 중계 옵션을 조정하시면 대략적인 실제 견적이 산출됩니다. 바로 추가 문의 시 무료 답사 권한을 즉시 부여해 드립니다.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 bg-brand-panel border border-slate-800 rounded-2xl p-6 sm:p-10 shadow-2xl">
+                <!-- Left: Calculator Inputs -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- 1. 패키지 기본 선택 -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-300 mb-3">1. 어떤 종류의 행사이신가요?</label>
+                        <div class="grid grid-cols-2 gap-3" id="package-selector">
+                            <button type="button" onclick="selectPackage('standard', 800000)" class="package-btn p-4 rounded-xl border border-white bg-slate-900/50 text-left transition-all hover:border-white/60 focus:outline-none" data-package="standard">
+                                <span class="block text-sm font-bold text-white">소규모 세미나</span>
+                                <span class="block text-xs text-slate-300 mt-1">기본형 단일 카메라 80만원 ~</span>
+                            </button>
+                            <button type="button" onclick="selectPackage('premium', 1800000)" class="package-btn p-4 rounded-xl border border-slate-800 bg-slate-900 text-slate-300 text-left transition-all hover:border-white/30 focus:outline-none" data-package="premium">
+                                <span class="block text-sm font-bold text-white">포럼 & 컨퍼런스</span>
+                                <span class="block text-xs text-slate-300 mt-1">전문가용 멀티캠 180만원 ~</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. 카메라 수량 조절 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <label class="text-sm font-bold text-slate-300">2. 카메라 투입 대수 (대당 20만원)</label>
+                            <span class="text-sm text-white font-bold font-montserrat" id="camera-val">2대</span>
+                        </div>
+                        <input type="range" id="camera-range" min="1" max="6" value="2" oninput="calculateQuote()" class="w-full accent-slate-100 bg-slate-800 h-2 rounded-lg cursor-pointer">
+                        <p class="text-[11px] text-slate-400">※ 무대 전반, 연사 근접, 청중 리액션용 등으로 구성하기 위해선 최소 2대 이상을 추천합니다.</p>
+                    </div>
+
+                    <!-- 3. 중계 시간 조절 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <label class="text-sm font-bold text-slate-300">3. 행사 중계 진행 시간 (시간당 10만원)</label>
+                            <span class="text-sm text-white font-bold font-montserrat" id="hours-val">3시간</span>
+                        </div>
+                        <input type="range" id="hours-range" min="1" max="12" value="3" oninput="calculateQuote()" class="w-full accent-slate-100 bg-slate-800 h-2 rounded-lg cursor-pointer">
+                    </div>
+
+                    <!-- 4. 부가 옵션 선택 -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-300 mb-3">4. 필요하신 맞춤 옵션을 선택해 주세요.</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="flex items-center gap-3 p-3.5 bg-slate-900 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 select-none">
+                                <input type="checkbox" id="opt-pip" onchange="calculateQuote()" class="w-4 h-4 accent-slate-700 rounded">
+                                <div>
+                                    <span class="block text-xs font-bold text-white">발표자료 PPT 화면 PIP 합성</span>
+                                    <span class="text-[10px] text-slate-400">+100,000원</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3 p-3.5 bg-slate-900 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 select-none">
+                                <input type="checkbox" id="opt-caption" onchange="calculateQuote()" class="w-4 h-4 accent-slate-700 rounded">
+                                <div>
+                                    <span class="block text-xs font-bold text-white">실시간 자막 & 타이틀 로고 송출</span>
+                                    <span class="text-[10px] text-slate-400">+150,000원</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3 p-3.5 bg-slate-900 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 select-none">
+                                <input type="checkbox" id="opt-multistream" onchange="calculateQuote()" class="w-4 h-4 accent-slate-700 rounded">
+                                <div>
+                                    <span class="block text-xs font-bold text-white">유튜브/줌 동시 다중 송출</span>
+                                    <span class="text-[10px] text-slate-400">+100,000원</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3 p-3.5 bg-slate-900 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 select-none">
+                                <input type="checkbox" id="opt-previsit" onchange="calculateQuote()" class="w-4 h-4 accent-slate-700 rounded" checked disabled>
+                                <div>
+                                    <span class="block text-xs font-bold text-white">사전 무상 답사 & 망 본딩</span>
+                                    <span class="text-[10px] text-green-400 font-bold">무상 혜택 (0원)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Calculator Output & Contact Form -->
+                <div class="lg:col-span-5 bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-mono">ESTIMATED TOTAL COST</span>
+                        <div class="flex items-baseline gap-1 border-b border-slate-800 pb-4">
+                            <span class="text-3xl sm:text-4xl font-black text-white font-montserrat" id="total-price">1,450,000</span>
+                            <span class="text-base text-white font-bold">원</span>
+                        </div>
+
+                        <!-- Price summary lines -->
+                        <div class="space-y-2 text-xs text-slate-400">
+                            <div class="flex justify-between">
+                                <span>선택된 기본 패키지</span>
+                                <span id="summary-base">800,000원</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>카메라 대수 조정</span>
+                                <span id="summary-cameras">400,000원</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>진행 시간 추가</span>
+                                <span id="summary-hours">250,000원</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>옵션 총액</span>
+                                <span id="summary-options">0원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Lead Submission Form -->
+                    <form id="lead-form" onsubmit="submitQuote(event)" class="space-y-4">
+                        <div>
+                            <label for="org-name" class="block text-xs text-slate-400 mb-1">회사/기관명 <span class="text-red-500">*</span></label>
+                            <input type="text" id="org-name" required placeholder="예: 공정미디어 주식회사" class="w-full bg-slate-950 border border-slate-800 focus:border-white focus:outline-none rounded-lg p-2.5 text-sm text-white">
+                        </div>
+                        <div>
+                            <label for="contact-name" class="block text-xs text-slate-400 mb-1">담당자 성함/직함 <span class="text-red-500">*</span></label>
+                            <input type="text" id="contact-name" required placeholder="예: 김동욱 과장" class="w-full bg-slate-950 border border-slate-800 focus:border-white focus:outline-none rounded-lg p-2.5 text-sm text-white">
+                        </div>
+                        <div>
+                            <label for="phone-num" class="block text-xs text-slate-400 mb-1">연락처 <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone-num" required placeholder="예: 010-0000-0000" class="w-full bg-slate-950 border border-slate-800 focus:border-white focus:outline-none rounded-lg p-2.5 text-sm text-white">
+                        </div>
+                        
+                        <button type="submit" class="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>이 견적으로 즉시 무료 상담 받기</span>
+                        </button>
+                        <p class="text-[10px] text-slate-500 text-center">※ 데이터 제출 시 기재된 연락처로 영업일 기준 30분 내 상담 연락을 드립니다.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="py-24 border-t border-white/10 bg-slate-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-200">Reviews</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white">실제 담당자들의 생생한 만족 후기</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-brand-panel border border-slate-800 rounded-xl p-6 relative">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg">👩‍💼</div>
+                        <div>
+                            <span class="block text-sm font-bold text-white">한국바이오과학진흥원</span>
+                            <span class="block text-[10px] text-slate-300">행사기획팀 박소윤 선임연구원</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        "매년 외부 프리랜서들을 사용하며 음향 잡음이나 버퍼링 때문에 심적으로 고소이 무척 많았습니다. 우연히 공정미디어와 함께 일하게 되었는데, 사전 현장 답사를 무상으로 오셔서 인터넷 환경까지 완벽히 정비해주신 후 무사히 포럼을 끝마쳤습니다. 앞으로 고정 파트너로 매년 함께할 계획입니다."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-panel border border-slate-800 rounded-xl p-6 relative">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg">👨‍💼</div>
+                        <div>
+                            <span class="block text-sm font-bold text-white">에이치랜드 테크놀로지</span>
+                            <span class="block text-[10px] text-slate-300">사내 교육혁신과 이재민 파트장</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        "실시간 기업 타운홀 미팅이라 보안 스트리밍이 필수였습니다. 까다로운 사내 인트라넷 방화벽 조건 속에서도 공정미디어 엔지니어분들이 망 연동 문제를 적극 해결해주셔서 버퍼링 없이 성공적으로 임직원 3,000명이 동시 접속해 원활하게 생방송을 마쳤습니다. 대단히 감사드립니다."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-brand-panel border border-slate-800 rounded-xl p-6 relative">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg">👩‍⚕️</div>
+                        <div>
+                            <span class="block text-sm font-bold text-white">대한임상소아학회</span>
+                            <span class="block text-[10px] text-slate-300">학술위원회 사무국 서혜원 대리</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        "발표 PPT 슬라이드와 현장 연사의 연출이 매끄럽게 어우러지는 것이 아주 중요한 의학 포럼이었습니다. 방송국 출신 PD님이 총지휘를 해주셔서 그런지, 카메라 전환이나 화면 레이아웃 분할이 정말 TV 뉴스나 시사 교양프로그램 보듯 눈에 피로 없이 매끄럽게 처리되었습니다. 의사 연사분들도 매우 칭찬하셨습니다."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4 mb-16">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-200">FAQ</h2>
+            <p class="text-3xl sm:text-4xl font-black text-white">자주 묻는 질문</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-brand-panel border border-slate-800 rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(1)" class="w-full p-5 flex items-center justify-between text-left focus:outline-none">
+                    <span class="font-bold text-slate-100 text-sm sm:text-base">Q. 서울/경기 외 타 지역도 중계 출장이 가능한가요?</span>
+                    <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-1" class="hidden border-t border-slate-800 p-5 bg-slate-900/50 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                    네, 가능합니다. 경기도 화성/수원 지사 및 서울 중심부에 사무실을 두고 있어 수도권 중심뿐만 아니라 사전에 조율되는 전국 지자체 및 연구소 등의 전국 출장 중계 서비스를 문제 없이 지원하고 있습니다. (다만 원거리의 경우 실비 수준의 소정의 출장비가 청구될 수 있습니다.)
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-brand-panel border border-slate-800 rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(2)" class="w-full p-5 flex items-center justify-between text-left focus:outline-none">
+                    <span class="font-bold text-slate-100 text-sm sm:text-base">Q. 무상 사전 현장 답사는 정말 비용이 전혀 안 드나요?</span>
+                    <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-2" class="hidden border-t border-slate-800 p-5 bg-slate-900/50 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                    네, 그렇습니다. 공정미디어는 "완벽한 리스크 관리"를 위해 계약이 가조율된 상태에서 행사 2~3일 전 엔지니어가 무상으로 현장을 직접 방문하는 것을 원칙으로 합니다. 현장의 랜선 인입 포트 및 대역폭 체크, 동선 확인을 통해 예기치 못한 당일 장애를 100% 예방합니다.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-brand-panel border border-slate-800 rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(3)" class="w-full p-5 flex items-center justify-between text-left focus:outline-none">
+                    <span class="font-bold text-slate-100 text-sm sm:text-base">Q. 행사 진행 후 세금계산서 발행 및 사후 정산 처리가 가능한가요?</span>
+                    <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-3" class="hidden border-t border-slate-800 p-5 bg-slate-900/50 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                    네, 법인 사업자로서 세금계산서 무상 발행 및 공공기관 맞춤형 수의 계약에 필요한 비교견적서, 사업자등록증, 통장 사본, 무사고 이행 각서 등의 서류 행정 작업을 전담 매니저가 기한 엄수하여 신속하게 지원해 드립니다.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-brand-panel border border-slate-800 rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(4)" class="w-full p-5 flex items-center justify-between text-left focus:outline-none">
+                    <span class="font-bold text-slate-100 text-sm sm:text-base">Q. 갑작스러운 송출 중단이나 정전 사고 등에 대한 대비가 있나요?</span>
+                    <i data-lucide="chevron-down" id="faq-icon-4" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-4" class="hidden border-t border-slate-800 p-5 bg-slate-900/50 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                    인터넷이 끊겨도 즉시 가동되는 LTE/5G 무선 망본딩 라우터 백업을 보유하고 있으며, 정전에 대비하여 주요 기기엔 UPS(무정전 전원 공급 장치)를 탑재하여 중계를 끊김 없이 임시 유지할 수 있는 안전 설비를 갖추고 운용 중입니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-16 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 mb-8">
+                <!-- Brand details -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="video" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-tight">공정미디어</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed max-w-sm">
+                        공중파 26년 경력의 연출력과 100% 자사 보유 장비 시스템으로 전국의 공공기관 및 대기업, 학술 단체의 성공적인 온·오프라인 하이브리드 행사를 중계 대행합니다.
+                    </p>
+                </div>
+
+                <!-- Fast Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <span class="block text-sm font-bold text-white">바로가기</span>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#about" class="hover:text-white">공정미디어 강점</a></li>
+                        <li><a href="#services" class="hover:text-white">행사 솔루션</a></li>
+                        <li><a href="#calculator" class="hover:text-white">실시간 자동 견적기</a></li>
+                        <li><a href="#faq" class="hover:text-white font-semibold">자주 묻는 질문</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacts -->
+                <div class="md:col-span-4 space-y-3">
+                    <span class="block text-sm font-bold text-white">오시는 길 / 연락처</span>
+                    <ul class="space-y-2 text-slate-400 leading-relaxed">
+                        <li><strong class="text-slate-300">지사:</strong> 경기도 화성시 / 수원시 비즈니스 거점 상시 대응</li>
+                        <li><strong class="text-slate-300">대표전화:</strong> 1588-0000 (상담 시간: 연중무휴 09:00 - 22:00)</li>
+                        <li><strong class="text-slate-300">이메일:</strong> contact@gongjeongmedia.co.kr</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright and legal information -->
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>© 2026 GONGJEONG Media Group. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-slate-300">이용약관</a>
+                    <a href="#" class="hover:text-slate-300">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lead Submission Success Modal (No window.alert allowed) -->
+    <div id="success-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-brand-panel border border-slate-700/60 max-w-md w-full rounded-2xl p-6 shadow-2xl relative space-y-6 text-center">
+            <div class="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-xl font-black text-white">무료 상담 신청이 완료되었습니다!</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    선택하신 예상 견적 내역과 기재하신 정보가 본사 영업 지원팀으로 안전하게 전달되었습니다. 
+                    공중파 26년 경력 베테랑 담당 PD가 <span class="text-brand-400 font-bold">30분 내로 신속하게 유선 안내</span>드리겠습니다.
+                </p>
+            </div>
+            
+            <div class="bg-slate-900 rounded-xl p-4 text-left border border-slate-800 space-y-2">
+                <span class="block text-[10px] text-slate-500 font-mono tracking-wider">신청 내역 요약</span>
+                <div class="flex justify-between text-xs">
+                    <span class="text-slate-400">기관/담당자:</span>
+                    <span class="text-white font-bold" id="modal-org-name">-</span>
+                </div>
+                <div class="flex justify-between text-xs">
+                    <span class="text-slate-400">선택한 행사 시간:</span>
+                    <span class="text-white font-bold" id="modal-hours">-</span>
+                </div>
+                <div class="flex justify-between text-xs">
+                    <span class="text-slate-400">최종 예상 견적:</span>
+                    <span class="text-brand-400 font-bold" id="modal-total-price">-</span>
+                </div>
+            </div>
+
+            <button onclick="closeModal()" class="w-full py-3 bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold rounded-lg transition-colors">
+                확인
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Widget (Simulating Channel Talk) -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+        <!-- Chat Bubble (Initially Expanded or on click) -->
+        <div id="chat-bubble" class="hidden mb-3 bg-brand-panel border border-slate-700/60 w-80 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-brand-600 to-slate-800 p-4 flex items-center justify-between text-white">
+                <div class="flex items-center gap-2.5">
+                    <div class="relative">
+                        <span class="text-xl">🎥</span>
+                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border border-brand-panel rounded-full"></span>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-bold text-brand-100">공정미디어 대표 PD</span>
+                        <span class="block text-[10px] text-brand-200">평일/주말 실시간 행사 중계 문의</span>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-slate-200 hover:text-white">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            
+            <!-- Chat Body -->
+            <div class="p-4 h-48 overflow-y-auto space-y-3 text-xs flex flex-col bg-slate-900" id="chat-body">
+                <div class="bg-slate-800 p-3 rounded-r-xl rounded-bl-xl text-slate-300 max-w-[85%] self-start">
+                    안녕하세요! 공중파 26년 경력의 공정미디어 대표 PD입니다. 
+                </div>
+                <div class="bg-slate-800 p-3 rounded-r-xl rounded-bl-xl text-slate-300 max-w-[85%] self-start">
+                    다가오는 행사의 실시간 송출이나 가격 산정에 어려움이 있으신가요? 편하게 남겨주시면 무료로 사전 답사 여부 및 연출 예산을 정밀 설계해 드리겠습니다. 😊
+                </div>
+            </div>
+
+            <!-- Chat Input (Mocking response) -->
+            <form onsubmit="sendChatMessage(event)" class="border-t border-slate-800 p-3 flex gap-2 bg-slate-950">
+                <input type="text" id="chat-input" placeholder="메시지를 입력하세요..." class="flex-1 bg-slate-900 border border-slate-800 focus:outline-none focus:border-brand-500 rounded px-2.5 py-1.5 text-xs text-slate-100">
+                <button type="submit" class="p-1.5 bg-brand-600 hover:bg-brand-700 text-white rounded">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Float Launcher Button -->
+        <button onclick="toggleChat()" class="w-14 h-14 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-105">
+            <i data-lucide="message-square" id="chat-launcher-icon" class="w-6 h-6"></i>
+        </button>
+    </div>
+
+    <!-- Script / Interaction logic -->
+    <script>
+        // Global State for Interactive Calculator
+        let activePackage = 'standard';
+        let basePrice = 800000;
+
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Background Slideshow System (Dissolve Transitions)
+        function startSlideShow() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.feed-slide');
+            if (slides.length === 0) return;
+
+            setInterval(() => {
+                // Fade out current slide
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+
+                // Move to next slide index
+                currentSlide = (currentSlide + 1) % slides.length;
+
+                // Fade in next slide
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }, 4000); // 4 seconds interval
+        }
+
+        // Real-time Cam Monitor Timecode Counter Simulation
+        function runTimecode() {
+            const timecodeEl = document.getElementById('cam-timecode');
+            if (!timecodeEl) return;
+
+            setInterval(() => {
+                let now = new Date();
+                let hours = String(now.getHours()).padStart(2, '0');
+                let minutes = String(now.getMinutes()).padStart(2, '0');
+                let seconds = String(now.getSeconds()).padStart(2, '0');
+                let frames = String(Math.floor(Math.random() * 30)).padStart(2, '0');
+                timecodeEl.innerText = `${hours}:${minutes}:${seconds}:${frames}`;
+            }, 33.33); // 30 FPS update interval
+        }
+
+        // Package Selector function
+        function selectPackage(pkg, price) {
+            activePackage = pkg;
+            basePrice = price;
+
+            // Highlight chosen package button
+            const buttons = document.querySelectorAll('.package-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-package') === pkg) {
+                    btn.classList.remove('border-slate-800', 'bg-slate-900', 'text-slate-300');
+                    btn.classList.add('border-white', 'bg-slate-900/50');
+                } else {
+                    btn.classList.remove('border-white', 'bg-slate-900/50');
+                    btn.classList.add('border-slate-800', 'bg-slate-900', 'text-slate-300');
+                }
+            });
+
+            calculateQuote();
+        }
+
+        // Real-time calculation logic
+        function calculateQuote() {
+            const cameras = parseInt(document.getElementById('camera-range').value);
+            const hours = parseInt(document.getElementById('hours-range').value);
+
+            // Update range UI text
+            document.getElementById('camera-val').innerText = `${cameras}대`;
+            document.getElementById('hours-val').innerText = `${hours}시간`;
+
+            // Calculate item costs
+            const cameraPrice = (cameras - 1) * 200000; // Base package includes 1 camera
+            const hourPrice = (hours - 1) * 100000;    // Base package includes 1 hour
+
+            let optionPrice = 0;
+            const hasPip = document.getElementById('opt-pip').checked;
+            const hasCaption = document.getElementById('opt-caption').checked;
+            const hasMultistream = document.getElementById('opt-multistream').checked;
+
+            if (hasPip) optionPrice += 100000;
+            if (hasCaption) optionPrice += 150000;
+            if (hasMultistream) optionPrice += 100000;
+
+            const totalPrice = basePrice + cameraPrice + hourPrice + optionPrice;
+
+            // Update Summary Panels
+            document.getElementById('summary-base').innerText = `${basePrice.toLocaleString()}원`;
+            document.getElementById('summary-cameras').innerText = `${cameraPrice.toLocaleString()}원`;
+            document.getElementById('summary-hours').innerText = `${hourPrice.toLocaleString()}원`;
+            document.getElementById('summary-options').innerText = `${optionPrice.toLocaleString()}원`;
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString();
+        }
+
+        // Handle quote form submission
+        function submitQuote(event) {
+            event.preventDefault();
+
+            const orgName = document.getElementById('org-name').value;
+            const contactName = document.getElementById('contact-name').value;
+            const hours = document.getElementById('hours-range').value;
+            const total = document.getElementById('total-price').innerText;
+
+            // Fill details in success modal
+            document.getElementById('modal-org-name').innerText = `${orgName} (${contactName} 님)`;
+            document.getElementById('modal-hours').innerText = `${hours}시간 중계 진행`;
+            document.getElementById('modal-total-price').innerText = `${total} 원`;
+
+            // Show modal
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        // Close success modal
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('lead-form').reset();
+            // Reset to default standard state
+            selectPackage('standard', 800000);
+        }
+
+        // Toggle FAQ Accordion
+        function toggleFaq(num) {
+            const answer = document.getElementById(`faq-ans-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Floating Chat simulation
+        function toggleChat() {
+            const chatBox = document.getElementById('chat-bubble');
+            const launcherIcon = document.getElementById('chat-launcher-icon');
+            
+            if (chatBox.classList.contains('hidden')) {
+                chatBox.classList.remove('hidden');
+                launcherIcon.setAttribute('data-lucide', 'x');
+            } else {
+                chatBox.classList.add('hidden');
+                launcherIcon.setAttribute('data-lucide', 'message-square');
+            }
+            lucide.createIcons();
+        }
+
+        // Mock chat system
+        function sendChatMessage(event) {
+            event.preventDefault();
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            if (!message) return;
+
+            const chatBody = document.getElementById('chat-body');
+
+            // User Message
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.className = "bg-brand-600 p-3 rounded-l-xl rounded-br-xl text-white max-w-[85%] self-end";
+            userMsgDiv.innerText = message;
+            chatBody.appendChild(userMsgDiv);
+            
+            input.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // Simple Auto Bot Response in 1 second
+            setTimeout(() => {
+                const botMsgDiv = document.createElement('div');
+                botMsgDiv.className = "bg-slate-800 p-3 rounded-r-xl rounded-bl-xl text-slate-300 max-w-[85%] self-start";
+                botMsgDiv.innerText = "메시지를 확인했습니다! 담당 피디가 신속히 상세 조정을 도와드릴 수 있도록, '실시간 견적기'에 상담 정보를 남겨주시거나 대표 연락처로 유선 전화 주시면 더욱 정밀한 설명이 즉각 가능합니다. 감사합니다.";
+                chatBody.appendChild(botMsgDiv);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 1000);
+        }
+
+        // Run on window load
+        window.onload = function() {
+            calculateQuote();
+            startSlideShow(); // Start background dissolve animation loop
+            runTimecode();    // Start real-time digital timecode clock
+        }
+    </script>
+</body>
+</html>
